@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Servicios y precios · Filo</title>
+  <meta name="description" content="Cortes desde $200, fade, barba con navaja y combos. Agenda en línea en San Pedro." />
+  <meta name="theme-color" content="#121110" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Servicios y precios · Filo" />
+  <meta property="og:description" content="Cortes desde $200, fade, barba con navaja y combos. Agenda en línea en San Pedro." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (barbería ficticia). Fotos de Unsplash, uso libre.
+       Servicios, precios, barberos y horario están en site.js. El encabezado y el pie
+       se repiten en las 3 páginas: si cambias uno, cambia los tres. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./">Filo<small>Barbería</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="servicios.html" aria-current="page">Servicios</a>
+        <a href="agenda.html">Agenda</a>
+      </nav>
+      <a class="btn btn--brass btn--sm header-cta" href="agenda.html">Agendar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Filo<small>Barbería</small></a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="servicios.html" aria-current="page">Servicios</a>
+      <a href="agenda.html">Agenda</a>
+    </nav>
+    <div class="drawer-foot">
+      <span class="status" data-status>Abierto</span>
+      <span>Calzada del Valle 340, San Pedro</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Servicios y precios</p>
+        <h1 class="h1">Precios <span>claros.</span></h1>
+        <p class="lead">Todos los servicios incluyen lavado, toalla caliente y una bebida de cortesía. Pagas en efectivo, tarjeta o transferencia.</p>
+      </div>
+    </section>
+
+    <!-- Lista de precios. Los que se pueden agendar deben existir también en SERVICIOS (site.js). -->
+    <div class="wrap prices-wrap">
+      <div class="prices">
+        <section class="price-group">
+          <h2>Cortes</h2>
+          <ul class="price-list">
+            <li class="price-item"><h3>Corte clásico</h3><span class="price">$250</span><p>Tijera y máquina, lavado y peinado. 40 min.</p><a class="link" href="agenda.html?s=corte">Agendar →</a></li>
+            <li class="price-item"><h3>Fade / degradado</h3><span class="price">$280</span><p>Degradado a máquina con navaja en la nuca. 45 min.</p><a class="link" href="agenda.html?s=fade">Agendar →</a></li>
+            <li class="price-item"><h3>Corte niño</h3><span class="price">$200</span><p>Hasta 12 años. 30 min.</p><a class="link" href="agenda.html?s=nino">Agendar →</a></li>
+          </ul>
+        </section>
+        <section class="price-group">
+          <h2>Barba</h2>
+          <ul class="price-list">
+            <li class="price-item"><h3>Arreglo de barba</h3><span class="price">$180</span><p>Perfilado con máquina y navaja, aceite y bálsamo. 30 min.</p><a class="link" href="agenda.html?s=barba">Agendar →</a></li>
+            <li class="price-item"><h3>Afeitado con navaja</h3><span class="price">$220</span><p>Ritual completo con toallas calientes. 35 min.</p><a class="link" href="agenda.html?s=navaja">Agendar →</a></li>
+          </ul>
+        </section>
+        <section class="price-group">
+          <h2>Combos</h2>
+          <ul class="price-list">
+            <li class="price-item"><h3>Corte + barba</h3><span class="price">$390</span><p>El más pedido. 70 min.</p><a class="link" href="agenda.html?s=combo">Agendar →</a></li>
+            <li class="price-item"><h3>Paquete novio</h3><span class="price">$1,200</span><p>Corte, barba, facial y mascarilla para el gran día. Pregunta por WhatsApp.</p></li>
+          </ul>
+        </section>
+        <section class="price-group">
+          <h2>Extras</h2>
+          <ul class="price-list">
+            <li class="price-item"><h3>Diseño o línea</h3><span class="price">+$60</span><p>Líneas a navaja o diseño a mano.</p></li>
+            <li class="price-item"><h3>Mascarilla negra</h3><span class="price">+$90</span><p>Limpieza de puntos negros mientras esperas.</p></li>
+            <li class="price-item"><h3>Ceja</h3><span class="price">+$50</span><p>Perfilado con navaja.</p></li>
+          </ul>
+        </section>
+      </div>
+      <figure class="prices-photo"><img src="assets/navaja.jpg" alt="Barbero perfilando una barba con navaja" loading="lazy" /></figure>
+    </div>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Filo<small>Barbería</small></a>
+          <p style="margin-top: 12px">Barbería de cita en San Pedro desde 2016.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Calzada del Valle 340<br />San Pedro Garza García, N.L.</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Lun a vie · 10:00 – 20:00<br />Sáb · 9:00 – 18:00</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/520000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Filo · Barbería de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón fijo para agendar en celular -->
+  <a class="float-cta" href="agenda.html"><i class="fa-regular fa-calendar"></i> Agendar cita</a>
+
+  <script src="../../assets/motion.js"></script>
+  <script src="site.js?v=1"></script>
+</body>
+</html>
