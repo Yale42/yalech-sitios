@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Cabañas · Casa Niebla</title>
+  <meta name="description" content="Neblina, Ocote y Roble: tres cabañas con chimenea en Mazamitla, para 2, 4 y 6 personas." />
+  <meta name="theme-color" content="#ece7de" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (cabañas ficticias). Fotos de Unsplash, uso libre.
+       El menú y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres.
+       Precios por cabaña: edita CABANAS en site.js y las tablas de cabanas.html. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header header--solid">
+    <div class="header-inner">
+      <a class="logo" href="./">Casa Niebla<small>Mazamitla, Jal.</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="cabanas.html" aria-current="page">Cabañas</a>
+        <a href="reservar.html">Reservar</a>
+      </nav>
+      <a class="btn btn--amber btn--sm header-cta" href="reservar.html">Reservar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Casa Niebla</a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="cabanas.html" aria-current="page">Cabañas</a>
+      <a href="reservar.html">Reservar</a>
+    </nav>
+    <p class="drawer-foot">Camino a El Tigre km 4, Mazamitla, Jalisco<br />A 2 horas de Guadalajara</p>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Las cabañas</p>
+        <h1 class="h1">Tres cabañas, <em>tres bosques.</em></h1>
+        <p class="lead">Cada una está separada de las otras por los pinos, con su propia fogata y estacionamiento.</p>
+      </div>
+    </section>
+
+    <section class="room wrap" id="neblina">
+      <div class="room-gallery"><img src="assets/neblina-1.jpg" alt="Cabaña Neblina" loading="lazy" /><img src="assets/neblina-2.jpg" alt="Cabaña Neblina" loading="lazy" /><img src="assets/taza.jpg" alt="Cabaña Neblina" loading="lazy" /></div>
+      <div class="room-body">
+        <div>
+          <h2 class="h2">Neblina · La más <em>íntima</em></h2>
+          <p>Para dos. Una sola habitación abierta con ventanales de piso a techo que dan directo al bosque. La cama queda frente a la chimenea.</p>
+          <ul class="specs"><li><i class="fa-solid fa-user-group"></i>2 personas</li><li><i class="fa-solid fa-bed"></i>Cama king</li><li><i class="fa-solid fa-fire"></i>Chimenea</li><li><i class="fa-solid fa-bath"></i>Regadera de lluvia</li></ul>
+        </div>
+        <div class="rate">
+          <table>
+            <tr><th>Domingo a jueves</th><td>$1,900 <small>/noche</small></td></tr>
+            <tr><th>Viernes y sábado</th><td>$2,400 <small>/noche</small></td></tr>
+          </table>
+          <a class="btn btn--dark btn--block" href="reservar.html?c=neblina">Reservar Neblina</a>
+          <p class="rate-note">Incluye desayuno, leña y blancos. Puentes y temporada alta pueden variar.</p>
+        </div>
+      </div>
+    </section>
+    <section class="room wrap" id="ocote">
+      <div class="room-gallery"><img src="assets/ocote-1.jpg" alt="Cabaña Ocote" loading="lazy" /><img src="assets/ocote-2.jpg" alt="Cabaña Ocote" loading="lazy" /><img src="assets/cafe.jpg" alt="Cabaña Ocote" loading="lazy" /></div>
+      <div class="room-body">
+        <div>
+          <h2 class="h2">Ocote · La <em>favorita</em> de las familias</h2>
+          <p>Techo de dos aguas, sala con chimenea de hierro y una terraza de madera para el café de la mañana. Arriba hay un tapanco con dos camas individuales.</p>
+          <ul class="specs"><li><i class="fa-solid fa-user-group"></i>4 personas</li><li><i class="fa-solid fa-bed"></i>1 queen + 2 individuales</li><li><i class="fa-solid fa-fire"></i>Chimenea</li><li><i class="fa-solid fa-tree"></i>Terraza</li></ul>
+        </div>
+        <div class="rate">
+          <table>
+            <tr><th>Domingo a jueves</th><td>$2,600 <small>/noche</small></td></tr>
+            <tr><th>Viernes y sábado</th><td>$3,200 <small>/noche</small></td></tr>
+          </table>
+          <a class="btn btn--dark btn--block" href="reservar.html?c=ocote">Reservar Ocote</a>
+          <p class="rate-note">Incluye desayuno, leña y blancos. Puentes y temporada alta pueden variar.</p>
+        </div>
+      </div>
+    </section>
+    <section class="room wrap" id="roble">
+      <div class="room-gallery"><img src="assets/roble-1.jpg" alt="Cabaña Roble" loading="lazy" /><img src="assets/roble-2.jpg" alt="Cabaña Roble" loading="lazy" /><img src="assets/fogata.jpg" alt="Cabaña Roble" loading="lazy" /></div>
+      <div class="room-body">
+        <div>
+          <h2 class="h2">Roble · Para venir <em>en grupo</em></h2>
+          <p>La más grande. Dos recámaras, estufa de leña, comedor para seis y asador afuera. Ideal para amigos o dos parejas.</p>
+          <ul class="specs"><li><i class="fa-solid fa-user-group"></i>6 personas</li><li><i class="fa-solid fa-door-closed"></i>2 recámaras</li><li><i class="fa-solid fa-fire"></i>Estufa de leña</li><li><i class="fa-solid fa-fire-burner"></i>Asador</li></ul>
+        </div>
+        <div class="rate">
+          <table>
+            <tr><th>Domingo a jueves</th><td>$3,400 <small>/noche</small></td></tr>
+            <tr><th>Viernes y sábado</th><td>$4,200 <small>/noche</small></td></tr>
+          </table>
+          <a class="btn btn--dark btn--block" href="reservar.html?c=roble">Reservar Roble</a>
+          <p class="rate-note">Incluye desayuno, leña y blancos. Puentes y temporada alta pueden variar.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Casa Niebla</a>
+          <p style="margin-top: 10px">Cabañas en el bosque de Mazamitla desde 2016.</p>
+        </div>
+        <div>
+          <h4>Dónde</h4>
+          <p>Camino a El Tigre km 4<br />Mazamitla, Jalisco</p>
+        </div>
+        <div>
+          <h4>Horarios</h4>
+          <p>Entrada · 15:00<br />Salida · 12:00</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Airbnb</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Casa Niebla · Cabañas de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

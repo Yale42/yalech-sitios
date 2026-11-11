@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Casa Niebla · Cabañas en Mazamitla</title>
+  <meta name="description" content="Tres cabañas con chimenea en el bosque de Mazamitla, a dos horas de Guadalajara. Reserva por WhatsApp." />
+  <meta name="theme-color" content="#191a16" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (cabañas ficticias). Fotos de Unsplash, uso libre.
+       El menú y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres.
+       Precios por cabaña: edita CABANAS en site.js y las tablas de cabanas.html. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./">Casa Niebla<small>Mazamitla, Jal.</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./" aria-current="page">Inicio</a>
+        <a href="cabanas.html">Cabañas</a>
+        <a href="reservar.html">Reservar</a>
+      </nav>
+      <a class="btn btn--amber btn--sm header-cta" href="reservar.html">Reservar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Casa Niebla</a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./" aria-current="page">Inicio</a>
+      <a href="cabanas.html">Cabañas</a>
+      <a href="reservar.html">Reservar</a>
+    </nav>
+    <p class="drawer-foot">Camino a El Tigre km 4, Mazamitla, Jalisco<br />A 2 horas de Guadalajara</p>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/hero.jpg" alt="Cabaña de madera iluminada al atardecer entre pinos" />
+      <div class="wrap">
+        <p class="eyebrow">Cabañas en el bosque · Mazamitla</p>
+        <h1 class="h1">Tres cabañas y <em>nada</em> de prisa.</h1>
+        <p class="lead">Chimenea, café de olla en la mañana y un bosque de pinos para ti. A dos horas de Guadalajara.</p>
+
+        <!-- Buscador: manda las fechas a reservar.html -->
+        <form class="search" action="reservar.html" method="get">
+          <label><span>Llegada</span><input type="date" name="llegada" required /></label>
+          <label><span>Salida</span><input type="date" name="salida" required /></label>
+          <label><span>Huéspedes</span>
+            <select name="huespedes"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+          </label>
+          <button class="btn btn--amber" type="submit">Ver disponibilidad</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Intro ========== -->
+    <section class="section">
+      <div class="wrap intro">
+        <div>
+          <p class="eyebrow">Casa Niebla</p>
+          <h2 class="h2">Despiertas con la <em>neblina</em> entre los pinos.</h2>
+          <p class="lead">Construimos las cabañas en 2016 en un terreno de la familia, a cuatro kilómetros del pueblo. Están separadas entre sí para que cada quien tenga su bosque, su fogata y su silencio.</p>
+          <ul class="stats">
+            <li><strong>3</strong><span>cabañas</span></li>
+            <li><strong>2 ha</strong><span>de bosque</span></li>
+            <li><strong>4.9</strong><span>en Airbnb</span></li>
+          </ul>
+        </div>
+        <img src="assets/bosque.jpg" alt="Cabaña pequeña entre pinos con neblina" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ========== Cabañas ========== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Las cabañas</p>
+            <h2 class="h2">Elige la tuya</h2>
+          </div>
+          <a class="link" href="cabanas.html">Ver todas con detalle →</a>
+        </div>
+        <ul class="cabins">
+          <li class="cabin"><a href="cabanas.html#neblina">
+            <div class="cabin-photo"><img src="assets/neblina-1.jpg" alt="Interior de la cabaña Neblina con ventanales al bosque" loading="lazy" /></div>
+            <div class="cabin-top"><h3 class="h3">Neblina</h3><span class="cabin-price">desde <strong>$1,900</strong>/noche</span></div>
+            <p>Para 2 · Ventanales al bosque · Chimenea</p>
+          </a></li>
+          <li class="cabin"><a href="cabanas.html#ocote">
+            <div class="cabin-photo"><img src="assets/ocote-1.jpg" alt="Sala de la cabaña Ocote con chimenea" loading="lazy" /></div>
+            <div class="cabin-top"><h3 class="h3">Ocote</h3><span class="cabin-price">desde <strong>$2,600</strong>/noche</span></div>
+            <p>Para 4 · Techo de dos aguas · Terraza</p>
+          </a></li>
+          <li class="cabin"><a href="cabanas.html#roble">
+            <div class="cabin-photo"><img src="assets/roble-1.jpg" alt="Cabaña Roble con estufa de leña" loading="lazy" /></div>
+            <div class="cabin-top"><h3 class="h3">Roble</h3><span class="cabin-price">desde <strong>$3,400</strong>/noche</span></div>
+            <p>Para 6 · 2 recámaras · Asador</p>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Qué hacer ========== -->
+    <section class="dark">
+      <div class="wrap">
+        <p class="eyebrow">Qué hacer</p>
+        <h2 class="h2">Lo mejor es <em>no hacer mucho.</em></h2>
+        <ul class="exp">
+          <li>
+            <img src="assets/cafe.jpg" alt="Café de olla servido en tazas sobre madera" loading="lazy" />
+            <h3>Café de olla al despertar</h3>
+            <p>Te dejamos la canasta en la puerta a las 8: café, pan de Mazamitla y fruta.</p>
+          </li>
+          <li>
+            <img src="assets/fogata.jpg" alt="Amigos alrededor de una fogata de noche" loading="lazy" />
+            <h3>Fogata bajo las estrellas</h3>
+            <p>Cada cabaña tiene su fogatero y leña incluida. Bombones a la mano.</p>
+          </li>
+          <li>
+            <img src="assets/sendero.jpg" alt="Sendero entre árboles con neblina" loading="lazy" />
+            <h3>Senderos y cascada</h3>
+            <p>Sale un sendero desde la propiedad hasta la cascada El Salto. Son 40 minutos.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Incluye ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Todas incluyen</p>
+        <h2 class="h2">Lo que vas a encontrar</h2>
+        <ul class="amenities">
+          <li><i class="fa-solid fa-fire"></i><div>Chimenea<small>Con leña ilimitada</small></div></li>
+          <li><i class="fa-solid fa-mug-hot"></i><div>Desayuno<small>Canasta cada mañana</small></div></li>
+          <li><i class="fa-solid fa-kitchen-set"></i><div>Cocina equipada<small>Estufa, refri y cafetera</small></div></li>
+          <li><i class="fa-solid fa-dog"></i><div>Mascotas<small>Bienvenidas (+$300)</small></div></li>
+          <li><i class="fa-solid fa-wifi"></i><div>Wifi<small>Por si lo necesitas</small></div></li>
+          <li><i class="fa-solid fa-car"></i><div>Estacionamiento<small>Junto a tu cabaña</small></div></li>
+          <li><i class="fa-solid fa-bed"></i><div>Blancos<small>Cobijas extra para el frío</small></div></li>
+          <li><i class="fa-solid fa-fire-burner"></i><div>Asador<small>Con carbón a la venta</small></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Reseñas ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow"><span class="stars">★★★★★</span> 4.9 en 412 reseñas</p>
+        <h2 class="h2">Los que ya vinieron</h2>
+        <div class="reviews">
+          <blockquote class="review">
+            <p>“Fuimos por nuestro aniversario a la Neblina. Despertar con ese ventanal no tiene precio.”</p>
+            <footer>Ana y Luis · Guadalajara</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“Llevamos a los niños y al perro. Hicimos fogata las dos noches. Ya reservamos para diciembre.”</p>
+            <footer>Familia Ortega · León</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“Super limpia, la cama comodísima y la canasta del desayuno es lo mejor.”</p>
+            <footer>Daniela · CDMX</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cómo llegar ========== -->
+    <section class="section">
+      <div class="wrap where">
+        <img src="assets/taza.jpg" alt="Taza de peltre sobre musgo en el bosque" loading="lazy" style="aspect-ratio: 4 / 3" />
+        <div>
+          <p class="eyebrow">Cómo llegar</p>
+          <h2 class="h2">Camino a El Tigre km 4</h2>
+          <p class="lead muted" style="margin-top: 14px">Te mandamos la ubicación exacta al reservar. El último kilómetro es terracería, cualquier coche entra.</p>
+          <ul class="routes">
+            <li>Guadalajara <span>2 h</span></li>
+            <li>Morelia <span>3 h 15 min</span></li>
+            <li>Centro de Mazamitla <span>10 min</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Preguntas</p>
+        <h2 class="h2">Antes de venir</h2>
+        <div class="faq">
+          <details>
+            <summary>¿A qué hora es la entrada y la salida?</summary>
+            <p>Entrada desde las 15:00 y salida a las 12:00. Si nadie llega después, te damos más tiempo sin costo.</p>
+          </details>
+          <details>
+            <summary>¿Cómo aparto mi fecha?</summary>
+            <p>Con un anticipo del 50% por transferencia. El resto lo pagas al llegar.</p>
+          </details>
+          <details>
+            <summary>¿Hace mucho frío?</summary>
+            <p>De noviembre a febrero baja hasta 2 °C en la noche. La chimenea y las cobijas extra lo resuelven.</p>
+          </details>
+          <details>
+            <summary>¿Puedo cancelar?</summary>
+            <p>Hasta 7 días antes te devolvemos el anticipo completo. Después, puedes cambiar la fecha una vez.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cierre ========== -->
+    <section class="closing">
+      <img src="assets/bombones.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <div class="wrap">
+        <h2 class="h2">El bosque te está <em>esperando.</em></h2>
+        <a class="btn btn--amber" href="reservar.html">Reservar mi cabaña</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Casa Niebla</a>
+          <p style="margin-top: 10px">Cabañas en el bosque de Mazamitla desde 2016.</p>
+        </div>
+        <div>
+          <h4>Dónde</h4>
+          <p>Camino a El Tigre km 4<br />Mazamitla, Jalisco</p>
+        </div>
+        <div>
+          <h4>Horarios</h4>
+          <p>Entrada · 15:00<br />Salida · 12:00</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Airbnb</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Casa Niebla · Cabañas de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

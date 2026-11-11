@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Comal · Cocina mexicana en la Roma</title>
+  <meta name="description" content="Tortillas hechas al momento, tacos de comal y mezcal. Colima 41, Roma Norte, CDMX." />
+  <meta name="theme-color" content="#f6efe3" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (restaurante ficticio). Fotos de Unsplash, uso libre.
+       El encabezado y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./">Comal<small>Cocina mexicana</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./" aria-current="page">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="visitanos.html">Visítanos</a>
+      </nav>
+      <a class="btn btn--chile btn--sm header-cta" href="visitanos.html#reservar">Reservar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Comal</a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./" aria-current="page">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="visitanos.html">Visítanos</a>
+      <a href="visitanos.html#reservar">Reservar</a>
+    </nav>
+    <div class="drawer-foot">
+      <span class="status" data-status>Abierto</span>
+      <span>Colima 41, Roma Norte, CDMX</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/hero.jpg" alt="Amigos cenando a la luz de las velas en Comal" />
+      <div class="wrap">
+        <span class="status" data-status>Abierto</span>
+        <h1 class="h1">Tortillas hechas al momento.</h1>
+        <p class="lead">Cocina mexicana de comal en la Roma desde 2014. Maíz nixtamalizado aquí mismo, salsas de molcajete y mezcal de pequeños productores.</p>
+        <div class="hero-actions">
+          <a class="btn btn--chile" href="visitanos.html#reservar">Reservar mesa</a>
+          <a class="btn btn--line" href="menu.html">Ver el menú</a>
+        </div>
+      </div>
+    </section>
+
+    <dl class="quick">
+      <div><dt>Dirección</dt><dd>Colima 41, Roma Norte</dd></div>
+      <div><dt>Horario</dt><dd>Mar a dom desde 13:00</dd></div>
+      <div><dt>Precio</dt><dd>$350 – $500 por persona</dd></div>
+      <div><dt>Reservas</dt><dd>Por WhatsApp</dd></div>
+    </dl>
+
+    <!-- ========== Lo más pedido ========== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="picks-head">
+          <div>
+            <p class="eyebrow">Lo más pedido</p>
+            <h2 class="h2">Si es tu primera vez</h2>
+          </div>
+        </div>
+        <ul class="picks">
+          <li class="pick">
+            <img src="assets/tacos-asada.jpg" alt="Tacos de arrachera con guacamole y limón" loading="lazy" />
+            <div class="pick-row"><h3 class="h3">Tacos de arrachera</h3><span class="price">$185</span></div>
+            <p>Tres tacos en tortilla de maíz azul con guacamole martajado.</p>
+          </li>
+          <li class="pick">
+            <img src="assets/tostada.jpg" alt="Tostada de atún con aguacate y totopos" loading="lazy" />
+            <div class="pick-row"><h3 class="h3">Tostada de atún</h3><span class="price">$165</span></div>
+            <p>Atún fresco, chile serrano, pepino y mayonesa de chipotle.</p>
+          </li>
+          <li class="pick">
+            <img src="assets/tacos-camaron.jpg" alt="Tacos de camarón al pastor" loading="lazy" />
+            <div class="pick-row"><h3 class="h3">Camarón al pastor</h3><span class="price">$210</span></div>
+            <p>Adobado en casa con piña asada y salsa de chile de árbol.</p>
+          </li>
+        </ul>
+        <p style="margin-top: 28px"><a class="link" href="menu.html">Ver el menú completo →</a></p>
+      </div>
+    </section>
+
+    <!-- ========== Historia ========== -->
+    <section class="section">
+      <div class="wrap story">
+        <img src="assets/manos.jpg" alt="Manos de una cocinera preparando tortillas" loading="lazy" />
+        <div>
+          <p class="eyebrow">Nuestra cocina</p>
+          <h2 class="h2">Todo empieza en el comal.</h2>
+          <p class="lead">Cada mañana nixtamalizamos el maíz que nos manda una cooperativa de Tlaxcala. Las tortillas se hacen a mano cuando pides, nunca antes.</p>
+          <p class="lead">Lo aprendimos de la abuela de Lupita, nuestra cocinera, que tuvo una fonda en Puebla por cuarenta años.</p>
+          <p class="signature">— Lupita y Andrés</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Galería ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">En Instagram</p>
+        <h2 class="h2">@comal.roma</h2>
+      </div>
+      <div class="gallery">
+        <img src="assets/mezcal.jpg" alt="Coctel de mezcal con chile seco" loading="lazy" />
+        <img src="assets/tacos-limon.jpg" alt="Tacos con limón y cebolla" loading="lazy" />
+        <img src="assets/salon.jpg" alt="El salón de Comal con luces colgantes" loading="lazy" />
+        <img src="assets/bebidas.jpg" alt="Bebidas en la barra" loading="lazy" />
+        <img src="assets/mesa.jpg" alt="Mesa llena de platillos y salsas" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ========== Reseñas ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Reseñas</p>
+        <h2 class="h2">Lo que dicen en Google</h2>
+        <div class="rating">
+          <strong>4.8</strong>
+          <span><span class="stars">★★★★★</span><br />1,240 reseñas</span>
+        </div>
+        <div class="reviews">
+          <blockquote class="review">
+            <p>“Las tortillas recién hechas cambian todo. La tostada de atún, obligatoria.”</p>
+            <footer>Mariana G.</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“Fuimos a un cumpleaños de 12 personas y nos atendieron increíble.”</p>
+            <footer>Jorge L.</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“El mejor mezcal de la colonia, y te explican de dónde viene cada uno.”</p>
+            <footer>Sofía R.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Visítanos ========== -->
+    <section class="band">
+      <div class="wrap">
+        <h2 class="h2">Te guardamos una mesa.</h2>
+        <p class="lead">Recibimos sin reservación, pero los viernes y sábados se llena. Reserva en un minuto por WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="btn btn--paper" href="visitanos.html#reservar">Reservar mesa</a>
+          <a class="link" href="visitanos.html">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Comal</a>
+          <p style="margin-top: 10px">Cocina mexicana de comal en la Roma desde 2014.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Colima 41, Roma Norte<br />Cuauhtémoc, CDMX</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Mar a jue · 13:00 – 23:00<br />Vie y sáb · 13:00 – 00:00<br />Dom · 13:00 – 19:00</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/520000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Comal · Restaurante de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

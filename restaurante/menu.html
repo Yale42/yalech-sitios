@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Menú · Comal</title>
+  <meta name="description" content="Menú de Comal: tacos de comal, mole poblano, mezcal y más." />
+  <meta name="theme-color" content="#f6efe3" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (restaurante ficticio). Fotos de Unsplash, uso libre.
+       El encabezado y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./">Comal<small>Cocina mexicana</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="menu.html" aria-current="page">Menú</a>
+        <a href="visitanos.html">Visítanos</a>
+      </nav>
+      <a class="btn btn--chile btn--sm header-cta" href="visitanos.html#reservar">Reservar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Comal</a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="menu.html" aria-current="page">Menú</a>
+      <a href="visitanos.html">Visítanos</a>
+      <a href="visitanos.html#reservar">Reservar</a>
+    </nav>
+    <div class="drawer-foot">
+      <span class="status" data-status>Abierto</span>
+      <span>Colima 41, Roma Norte, CDMX</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Menú</p>
+        <h1 class="h1">Hecho al momento</h1>
+        <p class="lead">Cambiamos algunos platillos cada temporada. Si tienes alguna alergia, avísanos al ordenar.</p>
+        <p class="legend"><span class="tag tag--hot">Pica</span> picante <span class="tag tag--veg">Veg</span> vegetariano</p>
+      </div>
+    </section>
+
+    <!-- Pestañas: se marca sola la sección que estás viendo -->
+    <nav class="tabs" aria-label="Secciones del menú">
+      <div class="tabs-inner">
+        <a class="tab" href="#entradas">Para empezar</a>
+        <a class="tab" href="#tacos">Tacos</a>
+        <a class="tab" href="#fuertes">Platos fuertes</a>
+        <a class="tab" href="#postres">Postres</a>
+        <a class="tab" href="#bebidas">Bebidas</a>
+      </div>
+    </nav>
+
+    <div class="wrap menu-layout">
+      <section class="menu-section" id="entradas">
+        <div class="menu-section-head">
+          <h2 class="h2">Para empezar</h2>
+          <img src="assets/guacamole.jpg" alt="Guacamole con totopos" loading="lazy" />
+        </div>
+        <ul class="dishes">
+          <li class="dish">
+            <div class="dish-row"><h3>Guacamole de molcajete<span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="price">$145</span></div>
+            <p>Con chapulines tostados o sin ellos. Totopos hechos aquí.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Tostada de atún<span class="tags"><span class="tag tag--hot">Pica</span></span></h3><span class="price">$165</span></div>
+            <p>Atún fresco, serrano, pepino y mayonesa de chipotle.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Esquites de comal<span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="price">$95</span></div>
+            <p>Elote asado, mayonesa de limón, queso cotija y chile piquín.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Sopa de tortilla</h3><span class="price">$120</span></div>
+            <p>Caldo de jitomate asado, aguacate, crema y chile pasilla.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-section" id="tacos">
+        <div class="menu-section-head">
+          <h2 class="h2">Tacos</h2>
+          <img src="assets/tacos-margarita.jpg" alt="Tacos con margarita" loading="lazy" />
+        </div>
+        <ul class="dishes">
+          <li class="dish">
+            <div class="dish-row"><h3>Arrachera</h3><span class="price">$185</span></div>
+            <p>Tres tacos en tortilla azul con guacamole martajado.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Camarón al pastor<span class="tags"><span class="tag tag--hot">Pica</span></span></h3><span class="price">$210</span></div>
+            <p>Adobado en casa, piña asada y salsa de chile de árbol.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Cochinita pibil<span class="tags"><span class="tag tag--hot">Pica</span></span></h3><span class="price">$165</span></div>
+            <p>Cocida doce horas en hoja de plátano, cebolla morada y habanero.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Hongos al ajillo<span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="price">$150</span></div>
+            <p>Setas, epazote y queso Oaxaca gratinado en el comal.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-section" id="fuertes">
+        <div class="menu-section-head">
+          <h2 class="h2">Platos fuertes</h2>
+          <img src="assets/mesa.jpg" alt="Mesa con platillos" loading="lazy" />
+        </div>
+        <ul class="dishes">
+          <li class="dish">
+            <div class="dish-row"><h3>Mole poblano</h3><span class="price">$260</span></div>
+            <p>Pierna de pollo con mole de 28 ingredientes, arroz rojo y ajonjolí.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Pescado a la talla<span class="tags"><span class="tag tag--hot">Pica</span></span></h3><span class="price">$320</span></div>
+            <p>Filete de huachinango con adobo rojo y verde, tortillas y salsas.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Enchiladas de tres salsas</h3><span class="price">$210</span></div>
+            <p>Rellenas de pollo o de queso, con verde, roja y mole.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Chile en nogada</h3><span class="price">$295</span></div>
+            <p>Solo de agosto a septiembre, con fruta de temporada.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-section" id="postres">
+        <div class="menu-section-head">
+          <h2 class="h2">Postres</h2>
+        </div>
+        <ul class="dishes">
+          <li class="dish">
+            <div class="dish-row"><h3>Flan de cajeta</h3><span class="price">$90</span></div>
+            <p>Receta de la casa, con nuez garapiñada.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Churros con chocolate<span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="price">$110</span></div>
+            <p>Chocolate de metate de Oaxaca para remojar.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Nieve de mamey<span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="price">$85</span></div>
+            <p>De una nevería de Tlaxcala que trabaja con nosotros.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-section" id="bebidas">
+        <div class="menu-section-head">
+          <h2 class="h2">Bebidas</h2>
+          <img src="assets/mezcal.jpg" alt="Coctel de mezcal" loading="lazy" />
+        </div>
+        <ul class="dishes">
+          <li class="dish">
+            <div class="dish-row"><h3>Mezcal de la casa</h3><span class="price">$120</span></div>
+            <p>Espadín joven de Santiago Matatlán, con naranja y sal de gusano.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Coctel Comal<span class="tags"><span class="tag tag--hot">Pica</span></span></h3><span class="price">$165</span></div>
+            <p>Mezcal, jamaica, limón y chile ancho.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Margarita de tamarindo</h3><span class="price">$145</span></div>
+            <p>Con escarchado de chamoy.</p>
+          </li>
+          <li class="dish">
+            <div class="dish-row"><h3>Agua fresca del día</h3><span class="price">$55</span></div>
+            <p>Pregunta por la de hoy: jamaica, horchata o pepino con limón.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="band">
+      <div class="wrap">
+        <h2 class="h2">¿Se te antojó?</h2>
+        <p class="lead">Reserva tu mesa por WhatsApp. Para grupos de más de 10, tenemos menú especial.</p>
+        <div class="hero-actions">
+          <a class="btn btn--paper" href="visitanos.html#reservar">Reservar mesa</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Comal</a>
+          <p style="margin-top: 10px">Cocina mexicana de comal en la Roma desde 2014.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Colima 41, Roma Norte<br />Cuauhtémoc, CDMX</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Mar a jue · 13:00 – 23:00<br />Vie y sáb · 13:00 – 00:00<br />Dom · 13:00 – 19:00</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/520000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Comal · Restaurante de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

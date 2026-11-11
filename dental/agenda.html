@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Agenda tu cita · Dental Arce</title>
+  <meta name="description" content="Agenda tu cita en Dental Arce, Providencia, Guadalajara. Te confirmamos por WhatsApp." />
+  <meta name="theme-color" content="#f4f6f3" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (clínica ficticia). Fotos de Unsplash, uso libre.
+       El encabezado y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./"><span class="logo-mark">A</span><span class="logo-text">Dental Arce<small>Providencia, GDL</small></span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="agenda.html" aria-current="page">Agenda tu cita</a>
+      </nav>
+      <a class="btn btn--teal btn--sm header-cta" href="agenda.html">Agendar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./"><span class="logo-mark">A</span><span class="logo-text">Dental Arce</span></a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="tratamientos.html">Tratamientos</a>
+      <a href="agenda.html" aria-current="page">Agenda tu cita</a>
+    </nav>
+    <div class="drawer-foot">
+      <a class="btn btn--mint btn--block" href="agenda.html">Agendar valoración gratis</a>
+      <a class="btn btn--block" style="color: #fff" href="tel:+523300000000"><i class="fa-solid fa-phone"></i> 33 0000 0000</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Agenda tu cita</p>
+        <h1 class="h1">Elige cuándo te queda.</h1>
+        <p class="lead">Llena el formulario y te confirmamos por WhatsApp en menos de una hora, en horario de la clínica.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap book">
+        <!-- El formulario no envía nada a un servidor: arma el mensaje y abre WhatsApp -->
+        <form class="form" id="cita-form">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="tel">Teléfono</label>
+            <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="33 1234 5678" />
+          </div>
+          <div class="field">
+            <label for="motivo">¿Qué necesitas?</label>
+            <select id="motivo" name="motivo"><option value="valoracion">Valoración gratis</option><option value="limpieza">Limpieza dental</option><option value="ortodoncia">Ortodoncia invisible</option><option value="blanqueamiento">Blanqueamiento</option><option value="implantes">Implantes</option><option value="dolor">Tengo dolor</option><option value="otro">Otro</option></select>
+          </div>
+          <div class="field">
+            <label for="fecha">Día</label>
+            <input id="fecha" name="fecha" type="date" required />
+          </div>
+          <fieldset class="field">
+            <legend>¿En qué horario?</legend>
+            <div class="choices">
+              <label><input type="radio" name="turno" value="Mañana" checked /><span>Mañana</span></label>
+              <label><input type="radio" name="turno" value="Tarde" /><span>Tarde</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>¿Es tu primera vez con nosotros?</legend>
+            <div class="choices">
+              <label><input type="radio" name="primera" value="Sí" checked /><span>Sí</span></label>
+              <label><input type="radio" name="primera" value="No" /><span>No</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="nota">Comentarios <span style="font-weight: 400; color: var(--muted)">(opcional)</span></label>
+            <textarea id="nota" name="nota" rows="3" placeholder="Por ejemplo: me duele una muela del lado izquierdo"></textarea>
+          </div>
+          <p class="form-note form-error" hidden></p>
+          <button class="btn btn--teal btn--block" type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp</button>
+          <p class="form-note">Tus datos solo se usan para agendar tu cita.</p>
+        </form>
+
+        <div class="info">
+          <div class="info-card info-card--alert">
+            <h3><i class="fa-solid fa-triangle-exclamation"></i> ¿Tienes una urgencia?</h3>
+            <p>Si tienes dolor fuerte o se te rompió un diente, llámanos. Te atendemos el mismo día.</p>
+            <a class="btn btn--teal btn--sm" href="tel:+523300000000"><i class="fa-solid fa-phone"></i> Llamar ahora</a>
+          </div>
+          <div class="info-card">
+            <h3><i class="fa-regular fa-clock"></i> Horario</h3>
+            <table class="hours"><tbody><tr data-day="1"><th>Lunes</th><td>9:00 – 20:00</td></tr><tr data-day="2"><th>Martes</th><td>9:00 – 20:00</td></tr><tr data-day="3"><th>Miércoles</th><td>9:00 – 20:00</td></tr><tr data-day="4"><th>Jueves</th><td>9:00 – 20:00</td></tr><tr data-day="5"><th>Viernes</th><td>9:00 – 20:00</td></tr><tr data-day="6"><th>Sábado</th><td>9:00 – 14:00</td></tr><tr data-day="0"><th>Domingo</th><td>Cerrado</td></tr></tbody></table>
+          </div>
+          <div class="info-card">
+            <h3><i class="fa-solid fa-location-dot"></i> Dirección</h3>
+            <p>Av. Providencia 2540, int. 3, col. Providencia, Guadalajara. Estacionamiento gratis para pacientes.</p>
+            <!-- Mapa: cambia la dirección después de q= -->
+            <iframe class="map" title="Mapa de Dental Arce" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Av.%20Providencia%202540%2C%20Guadalajara&amp;z=15&amp;output=embed"></iframe>
+            <a class="btn btn--line btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Av+Providencia+2540+Guadalajara" target="_blank" rel="noopener"><i class="fa-solid fa-location-arrow"></i> Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./"><span class="logo-mark">A</span><span class="logo-text">Dental Arce<small>Providencia, GDL</small></span></a>
+          <p style="margin-top: 12px">Odontología general, ortodoncia e implantes desde 1999.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Av. Providencia 2540, int. 3<br />Guadalajara, Jalisco</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Lun a vie · 9:00 – 20:00<br />Sáb · 9:00 – 14:00</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="tel:+523300000000">33 0000 0000</a></li>
+            <li><a href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Dental Arce · Clínica de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/520000000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

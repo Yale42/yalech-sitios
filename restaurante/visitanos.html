@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Visítanos · Comal</title>
+  <meta name="description" content="Dirección, horarios y reservaciones de Comal en la Roma Norte, CDMX." />
+  <meta name="theme-color" content="#f6efe3" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (restaurante ficticio). Fotos de Unsplash, uso libre.
+       El encabezado y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./">Comal<small>Cocina mexicana</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="visitanos.html" aria-current="page">Visítanos</a>
+      </nav>
+      <a class="btn btn--chile btn--sm header-cta" href="visitanos.html#reservar">Reservar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Comal</a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="visitanos.html" aria-current="page">Visítanos</a>
+      <a href="visitanos.html#reservar">Reservar</a>
+    </nav>
+    <div class="drawer-foot">
+      <span class="status" data-status>Abierto</span>
+      <span>Colima 41, Roma Norte, CDMX</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Visítanos</p>
+        <h1 class="h1">En la Roma, a media cuadra de Álvaro Obregón.</h1>
+      </div>
+    </section>
+
+    <section class="wrap visit">
+      <!-- Mapa: cambia la dirección después de q= -->
+      <div>
+        <iframe class="map" title="Mapa de Comal" loading="lazy"
+          src="https://maps.google.com/maps?q=Colima%2041%2C%20Roma%20Norte%2C%20CDMX&amp;z=16&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="address">Colima 41, Roma Norte<br />Cuauhtémoc, 06700, CDMX</p>
+        <div class="address-actions">
+          <a class="btn btn--chile btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Colima+41+Roma+Norte+CDMX" target="_blank" rel="noopener"><i class="fa-solid fa-location-arrow"></i> Cómo llegar</a>
+          <a class="btn btn--line btn--sm" href="tel:+525500000000"><i class="fa-solid fa-phone"></i> Llamar</a>
+        </div>
+        <p class="muted" style="margin-top: 16px; line-height: 1.5">Hay valet parking los viernes y sábados. La estación de Metrobús Álvaro Obregón está a 3 minutos caminando.</p>
+      </div>
+
+      <div>
+        <h2 class="h3">Horario</h2>
+        <table class="hours">
+          <tbody>
+            <tr data-day="2"><th>Martes</th><td>13:00 – 23:00</td></tr>
+            <tr data-day="3"><th>Miércoles</th><td>13:00 – 23:00</td></tr>
+            <tr data-day="4"><th>Jueves</th><td>13:00 – 23:00</td></tr>
+            <tr data-day="5"><th>Viernes</th><td>13:00 – 00:00</td></tr>
+            <tr data-day="6"><th>Sábado</th><td>13:00 – 00:00</td></tr>
+            <tr data-day="0"><th>Domingo</th><td>13:00 – 19:00</td></tr>
+            <tr data-day="1"><th>Lunes</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 16px"><span class="status" data-status style="background: var(--paper-2)">Abierto</span></p>
+      </div>
+    </section>
+
+    <!-- ========== Reservar ==========
+         El formulario no envía nada a un servidor: arma el mensaje y abre WhatsApp. -->
+    <section class="section" id="reservar" style="scroll-margin-top: 80px">
+      <div class="wrap visit" style="margin-top: 0">
+        <div>
+          <p class="eyebrow">Reservaciones</p>
+          <h2 class="h2">Aparta tu mesa</h2>
+          <p class="lead muted" style="margin-top: 14px">Llena los datos y te confirmamos por WhatsApp en menos de una hora. Guardamos la mesa 15 minutos.</p>
+          <img src="assets/salon.jpg" alt="El salón de Comal con luces colgantes" loading="lazy" style="margin-top: 24px; border-radius: var(--radius); aspect-ratio: 4 / 3; object-fit: cover; width: 100%" />
+        </div>
+        <form class="form" id="reservar-form">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" autocomplete="name" required placeholder="¿A nombre de quién?" />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="fecha">Día</label>
+              <input id="fecha" name="fecha" type="date" required />
+            </div>
+            <div class="field">
+              <label for="hora">Hora</label>
+              <select id="hora" name="hora" required><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option></select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="personas">Personas</label>
+            <select id="personas" name="personas">
+              <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 a 10</option><option>Más de 10</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="nota">¿Algo que debamos saber? <span class="muted">(opcional)</span></label>
+            <textarea id="nota" name="nota" rows="3" placeholder="Cumpleaños, alergias, silla para bebé…"></textarea>
+          </div>
+          <p class="form-note" id="form-error" hidden></p>
+          <button class="btn btn--chile" type="submit"><i class="fa-brands fa-whatsapp"></i> Reservar por WhatsApp</button>
+          <p class="form-note">Los lunes estamos cerrados.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Eventos ========== -->
+    <section class="section">
+      <div class="wrap events">
+        <img src="assets/hero.jpg" alt="Grupo cenando en una mesa larga" loading="lazy" />
+        <div>
+          <p class="eyebrow">Eventos privados</p>
+          <h2 class="h2">Cumpleaños, cenas de empresa y bodas pequeñas.</h2>
+          <p class="lead muted" style="margin-top: 14px">Tenemos un salón para hasta 40 personas con menú de tres tiempos y barra de mezcal.</p>
+          <div class="hero-actions">
+            <a class="btn btn--chile" href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20evento%20en%20Comal" target="_blank" rel="noopener">Cotizar evento</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Comal</a>
+          <p style="margin-top: 10px">Cocina mexicana de comal en la Roma desde 2014.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Colima 41, Roma Norte<br />Cuauhtémoc, CDMX</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Mar a jue · 13:00 – 23:00<br />Vie y sáb · 13:00 – 00:00<br />Dom · 13:00 – 19:00</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/520000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Comal · Restaurante de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Reservar · Casa Niebla</title>
+  <meta name="description" content="Reserva tu cabaña en Casa Niebla, Mazamitla. Calcula tu total y aparta por WhatsApp." />
+  <meta name="theme-color" content="#ece7de" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (cabañas ficticias). Fotos de Unsplash, uso libre.
+       El menú y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres.
+       Precios por cabaña: edita CABANAS en site.js y las tablas de cabanas.html. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header header--solid">
+    <div class="header-inner">
+      <a class="logo" href="./">Casa Niebla<small>Mazamitla, Jal.</small></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="cabanas.html">Cabañas</a>
+        <a href="reservar.html" aria-current="page">Reservar</a>
+      </nav>
+      <a class="btn btn--amber btn--sm header-cta" href="reservar.html">Reservar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./">Casa Niebla</a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="cabanas.html">Cabañas</a>
+      <a href="reservar.html" aria-current="page">Reservar</a>
+    </nav>
+    <p class="drawer-foot">Camino a El Tigre km 4, Mazamitla, Jalisco<br />A 2 horas de Guadalajara</p>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Reservar</p>
+        <h1 class="h1">Aparta tu <em>fin de semana.</em></h1>
+        <p class="lead">Elige tus fechas y tu cabaña. Te confirmamos por WhatsApp y apartas con el 50%.</p>
+      </div>
+    </section>
+
+    <section class="wrap book">
+      <!-- El formulario no envía nada a un servidor: calcula el total y abre WhatsApp -->
+      <form class="form" id="reserva-form">
+        <div class="form-row">
+          <div class="field"><label for="llegada">Llegada</label><input id="llegada" name="llegada" type="date" required /></div>
+          <div class="field"><label for="salida">Salida</label><input id="salida" name="salida" type="date" required /></div>
+        </div>
+        <div class="field">
+          <label for="huespedes">Huéspedes</label>
+          <select id="huespedes" name="huespedes"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <fieldset class="field">
+          <legend>Cabaña</legend>
+          <div class="pick"><label><input type="radio" name="cabana" value="neblina" /><span><img src="assets/neblina-1.jpg" alt="" /><div><strong>Neblina</strong><small>Hasta 2 personas</small></div><em>desde $1,900</em></span></label><label><input type="radio" name="cabana" value="ocote" /><span><img src="assets/ocote-1.jpg" alt="" /><div><strong>Ocote</strong><small>Hasta 4 personas</small></div><em>desde $2,600</em></span></label><label><input type="radio" name="cabana" value="roble" /><span><img src="assets/roble-1.jpg" alt="" /><div><strong>Roble</strong><small>Hasta 6 personas</small></div><em>desde $3,400</em></span></label></div>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="mascota" /> Voy con mascota (+$300 por estancia)</label>
+        <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" autocomplete="name" required /></div>
+        <div class="field"><label for="nota">¿Algo especial? (opcional)</label><textarea id="nota" name="nota" rows="2" placeholder="Aniversario, llegada tarde, cuna para bebé…"></textarea></div>
+        <button class="btn btn--dark btn--block" type="submit"><i class="fa-brands fa-whatsapp"></i> Reservar por WhatsApp</button>
+      </form>
+
+      <div>
+        <aside class="summary" aria-live="polite">
+          <h2>Tu estancia</h2>
+          <p class="summary-empty" data-sum="vacio">Elige tus fechas para ver el total.</p>
+          <div data-sum="detalle" hidden>
+            <dl>
+              <div><dt>Cabaña</dt><dd data-sum="cabana"></dd></div>
+              <div><dt>Noches</dt><dd data-sum="noches"></dd></div>
+              <div><dt>Mascota</dt><dd data-sum="mascota">$300</dd></div>
+              <div class="total"><dt>Total</dt><dd data-sum="total"></dd></div>
+            </dl>
+            <p class="summary-note">Apartas con <strong data-sum="anticipo"></strong> por transferencia. El resto lo pagas al llegar.</p>
+          </div>
+          <p class="form-error" hidden></p>
+        </aside>
+
+        <ul class="rules">
+          <li><i class="fa-regular fa-clock"></i><div><strong>Entrada 15:00 · Salida 12:00</strong><span>Si nadie llega después, te damos más tiempo.</span></div></li>
+          <li><i class="fa-solid fa-rotate-left"></i><div><strong>Cancelación gratis</strong><span>Hasta 7 días antes. Después, un cambio de fecha.</span></div></li>
+          <li><i class="fa-solid fa-volume-low"></i><div><strong>Silencio después de las 23:00</strong><span>Para que todos escuchen el bosque.</span></div></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./">Casa Niebla</a>
+          <p style="margin-top: 10px">Cabañas en el bosque de Mazamitla desde 2016.</p>
+        </div>
+        <div>
+          <h4>Dónde</h4>
+          <p>Camino a El Tigre km 4<br />Mazamitla, Jalisco</p>
+        </div>
+        <div>
+          <h4>Horarios</h4>
+          <p>Entrada · 15:00<br />Salida · 12:00</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Airbnb</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Casa Niebla · Cabañas de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>

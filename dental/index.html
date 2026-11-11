@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Clínica Dental Arce · Providencia, Guadalajara</title>
+  <meta name="description" content="Dentistas en Providencia, Guadalajara. Limpieza, ortodoncia invisible, blanqueamiento e implantes. Primera valoración gratis." />
+  <meta name="theme-color" content="#f4f6f3" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (clínica ficticia). Fotos de Unsplash, uso libre.
+       El encabezado y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./"><span class="logo-mark">A</span><span class="logo-text">Dental Arce<small>Providencia, GDL</small></span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./" aria-current="page">Inicio</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="agenda.html">Agenda tu cita</a>
+      </nav>
+      <a class="btn btn--teal btn--sm header-cta" href="agenda.html">Agendar</a>
+      <button class="menu-btn" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./"><span class="logo-mark">A</span><span class="logo-text">Dental Arce</span></a>
+      <button class="menu-btn" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+      <a href="./" aria-current="page">Inicio</a>
+      <a href="tratamientos.html">Tratamientos</a>
+      <a href="agenda.html">Agenda tu cita</a>
+    </nav>
+    <div class="drawer-foot">
+      <a class="btn btn--mint btn--block" href="agenda.html">Agendar valoración gratis</a>
+      <a class="btn btn--block" style="color: #fff" href="tel:+523300000000"><i class="fa-solid fa-phone"></i> 33 0000 0000</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Dentistas en Providencia desde 1999</p>
+          <h1 class="h1">Ir al dentista <em>sin miedo</em> sí es posible.</h1>
+          <p class="lead">Te explicamos todo antes de empezar, sin sorpresas en el precio. Tu primera valoración es gratis.</p>
+          <div class="hero-actions">
+            <a class="btn btn--teal" href="agenda.html">Agendar valoración gratis</a>
+            <a class="btn btn--line" href="tratamientos.html">Ver tratamientos</a>
+          </div>
+          <ul class="trust">
+            <li><span class="stars">★</span><strong>4.9</strong> en Google</li>
+            <li><i class="fa-solid fa-credit-card"></i>Hasta 12 meses sin intereses</li>
+            <li><i class="fa-solid fa-square-parking"></i>Estacionamiento</li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <img src="assets/sonrisa.jpg" alt="Sonrisa de una paciente después de su tratamiento" />
+          <div class="hero-card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div><strong>Citas esta semana</strong><span>Lunes a sábado, también en la tarde</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Tratamientos ========== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Tratamientos</p>
+            <h2 class="h2">¿Qué necesitas?</h2>
+          </div>
+          <p class="lead">Precios desde, para que sepas qué esperar. En tu valoración te damos el presupuesto exacto.</p>
+        </div>
+        <ul class="cards">
+          <li><a class="card" href="tratamientos.html#limpieza">
+            <span class="card-icon"><i class="fa-solid fa-tooth"></i></span>
+            <h3 class="h3">Limpieza dental</h3>
+            <p>Quitamos sarro y manchas en una sola cita de 45 minutos.</p>
+            <span class="card-foot"><strong>Desde $750</strong><i class="fa-solid fa-arrow-right"></i></span>
+          </a></li>
+          <li><a class="card card--feature" href="tratamientos.html#ortodoncia">
+            <span class="card-icon"><i class="fa-solid fa-face-smile"></i></span>
+            <h3 class="h3">Ortodoncia invisible</h3>
+            <p>Alineadores transparentes que nadie nota. Sin brackets.</p>
+            <span class="card-foot"><strong>Desde $2,100 al mes</strong><i class="fa-solid fa-arrow-right"></i></span>
+          </a></li>
+          <li><a class="card" href="tratamientos.html#blanqueamiento">
+            <span class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <h3 class="h3">Blanqueamiento</h3>
+            <p>Hasta 6 tonos más blanco en una sesión, sin sensibilidad.</p>
+            <span class="card-foot"><strong>Desde $3,500</strong><i class="fa-solid fa-arrow-right"></i></span>
+          </a></li>
+          <li><a class="card" href="tratamientos.html#implantes">
+            <span class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h3 class="h3">Implantes</h3>
+            <p>Recupera una pieza que perdiste, fija y natural.</p>
+            <span class="card-foot"><strong>Desde $14,900</strong><i class="fa-solid fa-arrow-right"></i></span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Primera visita ========== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="visit-box">
+          <div>
+            <p class="eyebrow">Tu primera cita</p>
+            <h2 class="h2">Así es tu valoración</h2>
+            <p class="price-tag"><s>$600</s> Gratis este mes</p>
+          </div>
+          <ol class="steps">
+            <li><div><strong>Platicamos</strong><span>Nos cuentas qué te molesta o qué te gustaría cambiar.</span></div></li>
+            <li><div><strong>Te revisamos</strong><span>Con radiografía digital y cámara intraoral, para que veas lo mismo que nosotros.</span></div></li>
+            <li><div><strong>Te damos tu plan</strong><span>Por escrito, con precio cerrado y opciones de pago. Tú decides sin presión.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Equipo ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Equipo</p>
+        <h2 class="h2">Una clínica familiar</h2>
+        <ul class="team">
+          <li class="doc">
+            <img src="assets/dra-elena.jpg" alt="Dra. Elena Arce platicando con una paciente" loading="lazy" />
+            <div class="doc-body">
+              <h3 class="h3">Dra. Elena Arce</h3>
+              <p class="doc-role">Fundadora · Odontología general</p>
+              <p>Abrió la clínica en 1999. Su especialidad es que los pacientes nerviosos salgan tranquilos.</p>
+              <p class="doc-meta">Cédula profesional 2847193 · UdeG</p>
+            </div>
+          </li>
+          <li class="doc">
+            <img src="assets/dr-daniel.jpg" alt="Dr. Daniel Arce atendiendo a una paciente" loading="lazy" style="object-position: center 30%" />
+            <div class="doc-body">
+              <h3 class="h3">Dr. Daniel Arce</h3>
+              <p class="doc-role">Ortodoncia e implantes</p>
+              <p>Especialista en ortodoncia invisible. Certificado en alineadores y cirugía de implantes.</p>
+              <p class="doc-meta">Cédula de especialidad 9928371 · UNAM</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="clinic">
+          <img src="assets/clinica.jpg" alt="Consultorio con luz natural" loading="lazy" />
+          <img src="assets/sillon.jpg" alt="Sillón dental" loading="lazy" />
+          <img src="assets/consultorio.jpg" alt="Sala de atención" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Opiniones ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Pacientes</p>
+        <h2 class="h2">Lo que nos dicen</h2>
+        <div class="testimonial">
+          <img src="assets/paciente.jpg" alt="Andrea, paciente de ortodoncia invisible" loading="lazy" />
+          <blockquote>
+            <p>“Llevaba diez años sin ir al dentista por miedo. Aquí me explicaron todo y terminé mi ortodoncia en 11 meses.”</p>
+            <footer><strong>Andrea M.</strong> · Ortodoncia invisible</footer>
+            <div class="google"><strong>4.9</strong><span class="stars">★★★★★</span> 380 reseñas en Google</div>
+          </blockquote>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Llevé a mis dos hijos y la doctora tuvo una paciencia increíble. Ya quieren regresar.”</p>
+            <footer>Carlos R.</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“Me dieron el presupuesto por escrito y no cambió ni un peso. Eso no pasa en todos lados.”</p>
+            <footer>Mónica T.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Preguntas ========== -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Preguntas</p>
+        <h2 class="h2">Antes de venir</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Aceptan seguros de gastos médicos?</summary>
+            <p>Sí, trabajamos con los principales seguros dentales. Te damos factura y los documentos para tu reembolso.</p>
+          </details>
+          <details>
+            <summary>¿Duele?</summary>
+            <p>Usamos anestesia sin aguja para la mayoría de los tratamientos. Si te pones nervioso, paramos cuando nos digas.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo pagar?</summary>
+            <p>Efectivo, transferencia o tarjeta. Con tarjetas participantes, hasta 12 meses sin intereses.</p>
+          </details>
+          <details>
+            <summary>¿Atienden niños?</summary>
+            <p>Sí, desde los 3 años. La primera visita es un juego para que se acostumbren al consultorio.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cierre ========== -->
+    <div class="wrap">
+      <section class="cta">
+        <div>
+          <h2 class="h2">Tu valoración es <em>gratis</em> este mes.</h2>
+          <p class="lead">Elige el día y la hora. Te confirmamos por WhatsApp.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn--white" href="agenda.html">Agendar ahora</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./"><span class="logo-mark">A</span><span class="logo-text">Dental Arce<small>Providencia, GDL</small></span></a>
+          <p style="margin-top: 12px">Odontología general, ortodoncia e implantes desde 1999.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Av. Providencia 2540, int. 3<br />Guadalajara, Jalisco</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Lun a vie · 9:00 – 20:00<br />Sáb · 9:00 – 14:00</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="tel:+523300000000">33 0000 0000</a></li>
+            <li><a href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Dental Arce · Clínica de ejemplo</span>
+        <a href="../../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/520000000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script src="site.js?v=1"></script>
+</body>
+</html>
