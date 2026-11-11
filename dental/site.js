@@ -49,3 +49,15 @@ if (form) {
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
   });
 }
+
+// ---------- Efectos ----------
+// Sombra en el encabezado al bajar
+const header = document.querySelector('.header');
+const sombra = () => header?.classList.toggle('is-scrolled', scrollY > 8);
+addEventListener('scroll', sombra, { passive: true });
+sombra();
+
+// Aparecen al bajar (motion.js)
+motion.reveal('.section .eyebrow, .section .h2, .section .lead, .section-head, .price-tag, .testimonial, .clinic, .visit-box, .cta, .treat, .info-card, .map, .form, .hours');
+motion.stagger('.cards, .team, .steps, .quotes, .faq, .pay');
+motion.count('.google strong');

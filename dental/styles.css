@@ -467,7 +467,41 @@ main:has(> .wrap:last-child > .cta) + .footer { margin-top: 64px; }
   .faq { max-width: 780px; }
 }
 
+/* ---------- Animaciones ---------- */
+/* Cambio de página suave (Inicio → Menú…): el encabezado se queda y el contenido se funde.
+   Funciona en Chrome, Edge y Safari recientes; en los demás simplemente cambia de página. */
+@view-transition { navigation: auto; }
+.header { view-transition-name: site-header; transition: box-shadow 0.3s ease; }
+.header.is-scrolled { box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.35); }
+::view-transition-old(root) { animation: page-out 0.25s ease both; }
+::view-transition-new(root) { animation: page-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes page-out { to { opacity: 0; } }
+@keyframes page-in { from { opacity: 0; translate: 0 14px; } }
+
+/* Entrada de la portada y del encabezado de cada página */
+@keyframes rise { from { opacity: 0; translate: 0 22px; } }
+@keyframes zoom { from { scale: 1.14; } }
+.page-head .wrap > * { animation: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.page-head .wrap > :nth-child(2) { animation-delay: 0.08s; }
+.page-head .wrap > :nth-child(3) { animation-delay: 0.16s; }
+.page-head .wrap > :nth-child(n+4) { animation-delay: 0.24s; }
+.hero-grid > :first-child > * { animation: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.hero-grid > :first-child > :nth-child(2) { animation-delay: 0.08s; }
+.hero-grid > :first-child > :nth-child(3) { animation-delay: 0.16s; }
+.hero-grid > :first-child > :nth-child(4) { animation-delay: 0.24s; }
+.hero-grid > :first-child > :nth-child(5) { animation-delay: 0.32s; }
+/* La foto se descubre y la tarjeta de citas aparece con un pequeño rebote */
+.hero-media img { animation: unveil 1.2s cubic-bezier(0.7, 0, 0.2, 1) 0.15s both; }
+@keyframes unveil { from { clip-path: inset(0 0 100% 0 round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
+.hero-card { animation: pop 0.7s cubic-bezier(0.3, 1.4, 0.5, 1) 1.1s both, bob 4s ease-in-out 2s infinite alternate; }
+@keyframes pop { from { opacity: 0; scale: 0.85; translate: 0 12px; } }
+@keyframes bob { to { translate: 0 -5px; } }
+/* Tarjetas de tratamientos: se elevan al pasar el mouse */
+.card { transition: translate 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease; }
+.card:hover { translate: 0 -4px; box-shadow: 0 18px 40px -22px rgba(15, 58, 53, 0.45); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  @view-transition { navigation: none; }
 }
