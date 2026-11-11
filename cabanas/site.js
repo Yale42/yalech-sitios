@@ -10,7 +10,8 @@ const MASCOTA = 300;
 
 const $ = (s, el = document) => el.querySelector(s);
 const pesos = n => '$' + n.toLocaleString('es-MX');
-const iso = d => d.toISOString().slice(0, 10);
+// Fecha local yyyy-mm-dd (no UTC: después de las 18:00 en México, UTC ya es mañana)
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const addDays = (s, n) => { const d = new Date(s + 'T12:00'); d.setDate(d.getDate() + n); return iso(d); };
 
 // Menú en celular

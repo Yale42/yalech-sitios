@@ -10,6 +10,8 @@ const HORARIO = {
   6: [13, 24],
 };
 const WHATSAPP = '520000000000';
+// Fecha local yyyy-mm-dd (no UTC: después de las 18:00 en México, UTC ya es mañana)
+const hoyISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 
 const hora = h => (h === 24 ? '00:00' : `${h}:00`);
 
@@ -66,7 +68,7 @@ if (tabs.length) {
 const form = document.querySelector('#reservar-form');
 if (form) {
   const fecha = form.querySelector('[name="fecha"]');
-  fecha.min = new Date().toISOString().slice(0, 10);
+  fecha.min = hoyISO();
   form.addEventListener('submit', ev => {
     ev.preventDefault();
     const d = Object.fromEntries(new FormData(form));

@@ -1,5 +1,7 @@
 // Dental Arce · funciones compartidas por las 3 páginas.
 const WHATSAPP = '520000000000';
+// Fecha local yyyy-mm-dd (no UTC: después de las 18:00 en México, UTC ya es mañana)
+const hoyISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 
 // Menú en celular
 const drawer = document.querySelector('.drawer');
@@ -18,7 +20,7 @@ document.querySelector(`.hours tr[data-day="${new Date().getDay()}"]`)?.classLis
 const form = document.querySelector('#cita-form');
 if (form) {
   const fecha = form.querySelector('[name="fecha"]');
-  fecha.min = new Date().toISOString().slice(0, 10);
+  fecha.min = hoyISO();
 
   // Si llegan desde un tratamiento (agenda.html?t=ortodoncia), lo dejamos elegido
   const t = new URLSearchParams(location.search).get('t');
