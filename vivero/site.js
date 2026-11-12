@@ -70,7 +70,13 @@ if (grid) {
 // ---------- Carrito (se guarda en este navegador) ----------
 let carrito = {};
 try { carrito = JSON.parse(localStorage.getItem('verdor-carrito')) || {}; } catch { carrito = {}; }
-Object.keys(carrito).forEach(id => { if (!porId(id)) delete carrito[id]; });
+if (typeof carrito !== 'object' || Array.isArray(carrito)) carrito = {};
+// Solo productos que existen y cantidades enteras entre 1 y 99 (por si lo guardado viene alterado)
+Object.keys(carrito).forEach(id => {
+  const n = Math.floor(Number(carrito[id]));
+  if (!porId(id) || !(n >= 1)) delete carrito[id];
+  else carrito[id] = Math.min(n, 99);
+});
 const guardar = () => { try { localStorage.setItem('verdor-carrito', JSON.stringify(carrito)); } catch {} };
 
 const cart = $('.cart');
@@ -119,7 +125,7 @@ document.addEventListener('click', e => {
   const add = e.target.closest('[data-add]');
   if (add) {
     const id = add.dataset.add;
-    carrito[id] = (carrito[id] || 0) + 1;
+    carrito[id] = Math.min((carrito[id] || 0) + 1, 99);
     guardar(); pintarCarrito();
     // Confirmación en el botón y brinco del contador
     add.classList.add('is-added');

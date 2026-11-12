@@ -24,7 +24,9 @@ if (form) {
 
   // Si llegan desde un tratamiento (agenda.html?t=ortodoncia), lo dejamos elegido
   const t = new URLSearchParams(location.search).get('t');
-  if (t) form.querySelector(`[name="motivo"] option[value="${t}"]`)?.setAttribute('selected', '');
+  // Se compara contra las opciones existentes: un enlace alterado no rompe la página
+  const opcion = [...form.querySelectorAll('[name="motivo"] option')].find(o => o.value === t);
+  if (t && opcion) opcion.selected = true;
 
   form.addEventListener('submit', ev => {
     ev.preventDefault();

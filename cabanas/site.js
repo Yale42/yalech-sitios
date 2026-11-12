@@ -53,8 +53,10 @@ if (form) {
   if (params.get('llegada')) llegada.value = params.get('llegada');
   if (params.get('salida')) salida.value = params.get('salida');
   if (params.get('huespedes')) huespedes.value = params.get('huespedes');
-  const elegida = params.get('c') || Object.keys(CABANAS).find(k => CABANAS[k].max >= +huespedes.value);
-  const radio = $(`[name="cabana"][value="${elegida}"]`, form);
+  const pedida = params.get('c');
+  const elegida = (pedida && CABANAS[pedida] ? pedida : null) || Object.keys(CABANAS).find(k => CABANAS[k].max >= +huespedes.value);
+  // Solo valores conocidos: un enlace alterado no rompe la página
+  const radio = [...form.querySelectorAll('[name="cabana"]')].find(r => r.value === elegida);
   if (radio) radio.checked = true;
   if (llegada.value) salida.min = addDays(llegada.value, 1);
 
