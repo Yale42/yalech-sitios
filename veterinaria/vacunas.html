@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Calendario de vacunas · Huellitas</title>
+  <meta name="description" content="Pon la fecha de nacimiento de tu perro o gato y mira qué vacuna le toca." />
+  <meta name="theme-color" content="#fff8ef" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Calendario de vacunas · Huellitas" />
+  <meta property="og:description" content="Pon la fecha de nacimiento de tu perro o gato y mira qué vacuna le toca." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Sitio de ejemplo (clínica ficticia). Ilustrado con CSS y SVG: no usa fotos.
+       El encabezado y el pie se repiten en las 3 páginas: si cambias uno, cambia los tres.
+       Horario, WhatsApp y vacunas están al inicio de site.js. -->
+
+  <!-- ========== Encabezado ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="./"><span class="logo-mark"><i class="fa-solid fa-paw"></i></span><span class="logo-text">Huellitas<small>Clínica veterinaria</small></span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="vacunas.html" aria-current="page">Calendario de vacunas</a>
+        <a href="citas.html">Agenda una cita</a>
+      </nav>
+      <a class="btn btn--orange btn--sm header-cta" href="citas.html">Agendar</a>
+      <button class="menu-btn" type="button" data-drawer aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="logo" href="./"><span class="logo-mark"><i class="fa-solid fa-paw"></i></span><span class="logo-text">Huellitas</span></a>
+      <button class="menu-btn" type="button" data-drawer aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav aria-label="Principal">
+        <a href="./">Inicio</a>
+        <a href="vacunas.html" aria-current="page">Calendario de vacunas</a>
+        <a href="citas.html">Agenda una cita</a>
+    </nav>
+    <div class="drawer-foot">
+      <a class="btn btn--orange btn--block" href="citas.html">Agendar cita</a>
+      <a class="btn btn--block" style="color: #fff" href="tel:+524420000000"><i class="fa-solid fa-truck-medical"></i> Urgencias 24 h</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow"><i class="fa-solid fa-syringe"></i> Calendario de vacunas</p>
+        <h1 class="h1">¿Qué vacuna <em>le toca?</em></h1>
+        <p class="lead">Pon cuándo nació y te decimos su calendario: lo que ya debería tener y cuándo es la siguiente. Es una guía: en consulta lo confirmamos con su cartilla.</p>
+      </div>
+    </section>
+    <section>
+      <div class="wrap vac-grid">
+        <form class="form" data-vacunas novalidate>
+          <fieldset class="field">
+            <legend>¿Es perro o gato?</legend>
+            <div class="seg">
+              <label><input type="radio" name="especie" value="perro" checked /><span><i class="fa-solid fa-dog"></i> Perro</span></label>
+              <label><input type="radio" name="especie" value="gato" /><span><i class="fa-solid fa-cat"></i> Gato</span></label>
+            </div>
+          </fieldset>
+          <label class="field"><span>¿Cómo se llama?</span><input name="nombre" maxlength="30" placeholder="Ej. Firulais" autocomplete="off" /></label>
+          <label class="field"><span>¿Cuándo nació? <small>(aproximado está bien)</small></span><input name="nacio" type="date" /></label>
+          <p class="form-error" data-vac-error role="alert" hidden></p>
+          <button class="btn btn--orange btn--block" type="submit"><i class="fa-solid fa-calendar-check"></i> Ver su calendario</button>
+        </form>
+        <div class="card-result" data-resultado aria-live="polite">
+          <div class="empty-result"><i class="fa-solid fa-shield-dog"></i><p>Aquí aparece su calendario de vacunas.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Pie ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="./"><span class="logo-mark"><i class="fa-solid fa-paw"></i></span><span class="logo-text">Huellitas<small>Clínica veterinaria</small></span></a>
+          <p style="margin-top: 12px">Perros y gatos en buenas manos desde 2012.</p>
+        </div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Av. Zaragoza 1520, col. Centro Sur<br />Querétaro, Qro.</p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <p>Lun a sáb · 9:00 – 20:00<br />Dom · 10:00 – 14:00<br />Urgencias 24 h</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="tel:+524420000000">442 000 0000</a></li>
+            <li><a href="https://wa.me/520000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Huellitas · Clínica de ejemplo</span>
+        <a href="../">Diseño de yalech →</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/520000000000?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script src="../assets/motion.js"></script>
+  <script src="site.js?v=1"></script>
+</body>
+</html>
