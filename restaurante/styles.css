@@ -441,3 +441,6 @@ main:has(> .band:last-child) + .footer { margin-top: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   @view-transition { navigation: none; }
 }
+
+/* El mapa también se alcanza con Tab: que se vea cuando está enfocado */
+.map:focus-visible { outline: 3px solid var(--chile); outline-offset: 3px; }
