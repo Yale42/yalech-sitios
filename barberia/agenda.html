@@ -105,7 +105,7 @@
 
         <fieldset class="step">
           <legend><b>5</b> Tus datos</legend>
-          <label class="field"><span>Nombre</span><input name="nombre" required autocomplete="name" placeholder="Para saber a quién esperamos" /></label>
+          <label class="field"><span>Nombre</span><input name="nombre" required data-error="Escribe tu nombre para saber a quién esperamos." autocomplete="name" placeholder="Para saber a quién esperamos" /></label>
         </fieldset>
         <p class="form-error" hidden></p>
       </div>
@@ -160,5 +160,6 @@
   <script src="site.js?v=1"></script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="web" data-ejemplo="Barbería y salón" data-para="Filo"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

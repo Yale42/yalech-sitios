@@ -36,12 +36,12 @@ if (form) {
     if (dia.getDay() === 0) {
       error.textContent = 'Los domingos no abrimos. Elige otro día, por favor.';
       error.hidden = false;
-      return;
+      return form.querySelector('[name=fecha]')?.focus();
     }
     if (dia.getDay() === 6 && d.turno === 'Tarde') {
       error.textContent = 'Los sábados solo atendemos en la mañana.';
       error.hidden = false;
-      return;
+      return form.querySelector('[name=turno]')?.focus();
     }
     error.hidden = true;
     const motivo = form.querySelector('[name="motivo"]').selectedOptions[0].textContent;

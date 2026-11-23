@@ -106,7 +106,7 @@ if (form) {
     if (!r) {
       error.textContent = 'Elige tus fechas de llegada y salida.';
       error.hidden = false;
-      return;
+      return form.querySelector(form.llegada?.value ? '[name=salida]' : '[name=llegada]')?.focus();
     }
     if (+huespedes.value > r.c.max) return pintar();
     const d = Object.fromEntries(new FormData(form));

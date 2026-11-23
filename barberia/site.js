@@ -136,6 +136,7 @@ if (form) {
       error.textContent = 'Elige un horario libre.';
       error.hidden = false;
       horasBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      horasBox.querySelector('input:not(:disabled), button:not(:disabled)')?.focus({ preventScroll: true });
       return;
     }
     const s = SERVICIOS[d.servicio];

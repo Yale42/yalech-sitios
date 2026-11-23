@@ -84,7 +84,7 @@ if (fv) {
     const falla = !/^\d{4}-\d{2}-\d{2}$/.test(n) ? '¿Cuándo nació? Aunque sea aproximado.' : n > hoyISO() ? 'La fecha de nacimiento no puede ser en el futuro.' : n < minimo ? 'Revisa la fecha: parece de hace muchos años.' : '';
     err.textContent = falla;
     err.hidden = !falla;
-    if (falla) return;
+    if (falla) return fv.nacio.focus();
     const cal = calendario(especie, n);
     const sig = cal.find(v => v.estado === 'siguiente');
     caja.innerHTML = `
@@ -123,7 +123,7 @@ if (form) {
       : dia.getDay() === 0 && d.turno === 'Tarde' ? 'Los domingos solo abrimos en la mañana.' : '';
     error.textContent = falla;
     error.hidden = !falla;
-    if (falla) return;
+    if (falla) return form.querySelector(!d.dueno.trim() ? '[name=dueno]' : !d.mascota.trim() ? '[name=mascota]' : falla.startsWith('Elige') ? '[name=fecha]' : '[name=turno]')?.focus();
     const fechaTxt = dia.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
     let msg = `Hola, quiero agendar una cita en Huellitas 🐾\n\nDueño: ${d.dueno.trim()}\nMascota: ${d.mascota.trim()} (${d.especie})\nMotivo: ${form.motivo.selectedOptions[0].textContent}\nDía: ${fechaTxt}, en la ${d.turno.toLowerCase()}`;
     if (d.nota.trim()) msg += `\nNota: ${d.nota.trim()}`;

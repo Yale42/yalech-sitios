@@ -109,12 +109,12 @@
         <form class="form" id="reservar-form">
           <div class="field">
             <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" autocomplete="name" required placeholder="¿A nombre de quién?" />
+            <input id="nombre" name="nombre" autocomplete="name" required data-error="¿A nombre de quién apartamos la mesa?" placeholder="¿A nombre de quién?" />
           </div>
           <div class="form-row">
             <div class="field">
               <label for="fecha">Día</label>
-              <input id="fecha" name="fecha" type="date" required />
+              <input id="fecha" name="fecha" type="date" required data-error="Elige el día de tu reservación." />
             </div>
             <div class="field">
               <label for="hora">Hora</label>
@@ -190,5 +190,6 @@
   <script src="site.js?v=3"></script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="web" data-ejemplo="Restaurante" data-para="Comal"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

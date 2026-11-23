@@ -204,10 +204,10 @@
           <div class="sums-total"><dt>Total</dt><dd data-sum="total"></dd></div>
         </dl>
         <form id="pedido-form" class="order">
-          <label class="field"><span>Tu nombre</span><input name="nombre" required autocomplete="name" /></label>
+          <label class="field"><span>Tu nombre</span><input name="nombre" required data-error="Escribe tu nombre para la entrega." autocomplete="name" /></label>
           <div class="field-row">
-            <label class="field"><span>Colonia</span><input name="colonia" required placeholder="Ej. Narvarte" /></label>
-            <label class="field"><span>Día de entrega</span><input name="dia" type="date" required /></label>
+            <label class="field"><span>Colonia</span><input name="colonia" required data-error="Escribe tu colonia para saber si llegamos." placeholder="Ej. Narvarte" /></label>
+            <label class="field"><span>Día de entrega</span><input name="dia" type="date" required data-error="Elige el día de entrega." /></label>
           </div>
           <label class="field"><span>Nota (opcional)</span><input name="nota" placeholder="Ej. Es para regalo" /></label>
           <button class="btn btn--forest btn--block" type="submit"><i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp</button>
@@ -221,5 +221,6 @@
   <script src="site.js?v=2"></script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="web" data-ejemplo="Tienda en línea" data-para="Verdor"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

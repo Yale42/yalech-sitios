@@ -68,8 +68,8 @@
       <!-- El formulario no envía nada a un servidor: calcula el total y abre WhatsApp -->
       <form class="form" id="reserva-form">
         <div class="form-row">
-          <div class="field"><label for="llegada">Llegada</label><input id="llegada" name="llegada" type="date" required /></div>
-          <div class="field"><label for="salida">Salida</label><input id="salida" name="salida" type="date" required /></div>
+          <div class="field"><label for="llegada">Llegada</label><input id="llegada" name="llegada" type="date" required data-error="Elige tu fecha de llegada." /></div>
+          <div class="field"><label for="salida">Salida</label><input id="salida" name="salida" type="date" required data-error="Elige tu fecha de salida." /></div>
         </div>
         <div class="field">
           <label for="huespedes">Huéspedes</label>
@@ -80,7 +80,7 @@
           <div class="pick"><label><input type="radio" name="cabana" value="neblina" /><span><img src="assets/neblina-1.jpg" alt="" /><div><strong>Neblina</strong><small>Hasta 2 personas</small></div><em>desde $1,900</em></span></label><label><input type="radio" name="cabana" value="ocote" /><span><img src="assets/ocote-1.jpg" alt="" /><div><strong>Ocote</strong><small>Hasta 4 personas</small></div><em>desde $2,600</em></span></label><label><input type="radio" name="cabana" value="roble" /><span><img src="assets/roble-1.jpg" alt="" /><div><strong>Roble</strong><small>Hasta 6 personas</small></div><em>desde $3,400</em></span></label></div>
         </fieldset>
         <label class="check"><input type="checkbox" name="mascota" /> Voy con mascota (+$300 por estancia)</label>
-        <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" autocomplete="name" required /></div>
+        <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" autocomplete="name" required data-error="Escribe tu nombre para la reservación." /></div>
         <div class="field"><label for="nota">¿Algo especial? (opcional)</label><textarea id="nota" name="nota" rows="2" placeholder="Aniversario, llegada tarde, cuna para bebé…"></textarea></div>
         <button class="btn btn--dark btn--block" type="submit"><i class="fa-brands fa-whatsapp"></i> Reservar por WhatsApp</button>
       </form>
@@ -146,5 +146,6 @@
   <script src="site.js?v=4"></script>
   <!-- Modo muestra (ejemplo ficticio). Para un cliente real, borra la siguiente línea. -->
   <script src="../assets/muestra.js?v=2" data-servicio="web" data-ejemplo="Hospedaje" data-para="Casa Niebla"></script>
+  <script src="../assets/errores.js?v=1"></script>
 </body>
 </html>

@@ -80,7 +80,7 @@ if (form) {
         ? `Ese día cerramos a las ${hora(HORARIO[dow][1])}. La última reservación es una hora antes.`
         : 'Ese día estamos cerrados. Elige otro, por favor.';
       error.hidden = false;
-      return;
+      return form.querySelector(HORARIO[dow] ? '[name=hora]' : '[name=fecha]')?.focus();
     }
     error.hidden = true;
     const dia =new Date(d.fecha + 'T12:00').toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
