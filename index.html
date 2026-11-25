@@ -56,7 +56,7 @@
     <div class="grid">
       <article class="item">
         <a class="phone" href="dental/" target="_blank" rel="noopener" aria-label="Ver sitio de consultorio en vivo">
-          <span class="screen"><img src="assets/plantillas/web-dental.jpg" alt="Sitio web de un consultorio dental" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/web-dental.webp" /></span>
+          <span class="screen"><img src="assets/plantillas/web-dental.jpg" alt="Sitio web de un consultorio dental" fetchpriority="high" width="540" height="1169" data-tall="assets/plantillas/largas/web-dental.webp" /></span>
         </a>
         <div class="item-info">
           <h3 class="item-name">Consultorio</h3>
@@ -251,7 +251,10 @@
       tall.onload = () => { img.removeAttribute('height'); img.src = tall.src; e.target.classList.add('is-tall'); medir(e.target); };
       tall.src = img.dataset.tall;
     }), { rootMargin: '300px' });
-    if (!motion.calm) phones.forEach(p => cargar.observe(p));
+    // Las capturas largas esperan a que la página termine de cargar, para no competir con lo primero que se ve
+    const empezar = () => { if (!motion.calm) phones.forEach(p => cargar.observe(p)); };
+    if (document.readyState === 'complete') setTimeout(empezar, 300);
+    else addEventListener('load', () => setTimeout(empezar, 300), { once: true });
     addEventListener('resize', () => document.querySelectorAll('.phone.is-tall').forEach(medir));
 
     // En pantallas táctiles no hay "pasar el mouse": se recorre sola mientras está a la vista
